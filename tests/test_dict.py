@@ -1,4 +1,5 @@
 import unittest
+from typing import Any
 
 
 # =========================
@@ -6,54 +7,21 @@ import unittest
 # =========================
 
 def extract_active_names(users):
-    """
-    Task 1.
-    Return names of users where active == True.
-
-    Expected:
-    ["Taras", "Bob"]
-
-    Use:
-    - list
-    - dict
-    - list comprehension
-    """
-    pass
+    return [user["name"] for user in users if user.get("active", False)]
 
 
 def unique_tools(events):
-    """
-    Task 2.
-    Return unique tool names from agent events.
-
-    Expected:
-    {"search_logs", "fetch_metrics", "summarize"}
-
-    Use:
-    - set
-    - dict access
-    - set comprehension
-    """
-    pass
-
+    return { event["tool"] for event in events if "tool" in event}
 
 def count_by_status(events):
-    """
-    Task 3.
-    Return dict: status -> count.
+    result = {}
+    for event in events:
+        if "status" not in event:
+            continue
 
-    Expected:
-    {
-        "success": 2,
-        "error": 1,
-        "skipped": 1,
-    }
-
-    Use:
-    - dict
-    - loop
-    """
-    pass
+        key = event["status"]
+        result[key] = result.get(key, 0) + 1
+    return result
 
 
 # =========================
@@ -67,6 +35,7 @@ class DictListSetTestCase(unittest.TestCase):
             {"name": "Taras", "active": True},
             {"name": "Anna", "active": False},
             {"name": "Bob", "active": True},
+            {"no": "Bob", "a": True},
         ]
 
         result = extract_active_names(users)
