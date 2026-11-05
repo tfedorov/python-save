@@ -2,7 +2,7 @@ import json
 import pytest
 
 
-def test_dumps_succes():
+def test_dumps_success():
     # Arrange
     input_data = {"name": "Alice", "age": 30}
 
@@ -17,7 +17,7 @@ def test_dumps_succes():
     assert result == expected
 
 
-def test_loads_succes():
+def test_loads_success():
     # Arrange
     input_string = '{"name": "Alice", "age": 30}'
 
@@ -32,7 +32,7 @@ def test_loads_succes():
     assert result == expected
 
 
-def test_loads_succes_type_mapping():
+def test_loads_success_type_mapping():
     # Arrange
     input_string = '{"active": true, "score": null, "items": [1, 2]}'
 
@@ -47,7 +47,7 @@ def test_loads_succes_type_mapping():
     assert result == expected
 
 
-def test_dump_succes(tmp_path):
+def test_dump_success(tmp_path):
     # Arrange
     input_data = {"name": "Alice", "age": 30}
     input_path = tmp_path / "data.json"
@@ -65,7 +65,7 @@ def test_dump_succes(tmp_path):
     assert result == expected
 
 
-def test_load_succes(tmp_path):
+def test_load_success(tmp_path):
     # Arrange
     input_path = tmp_path / "data.json"
     input_path.write_text("""\
@@ -86,7 +86,7 @@ def test_load_succes(tmp_path):
     assert result == expected
 
 
-def test_dumps_succes_pretty_print():
+def test_dumps_success_pretty_print():
     # Arrange
     input_data = {"b": 2, "a": 1}
 

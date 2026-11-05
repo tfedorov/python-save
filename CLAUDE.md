@@ -34,11 +34,13 @@ Rules:
 17. Do not use module-level constants.
 18. Keep tests small, independent, and fast.
 19. If extra test dependencies are needed, propose them first.
-20. Name tests using the pattern: test_<function_name>_<succes|failed>[_<one_word_case>]. Use _succes or _failed suffix. Add a [_<one_word_case>] case only when multiple tests share the same succes/failed direction.
+20. Name tests using the pattern: test_<function_name>_<success|failed>[_<one_word_case>]. Use _success or _failed suffix. Add a [_<one_word_case>] case only when multiple tests share the same succes/failed direction.
 21. Duplicate expected strings inside each test method. Do not extract shared strings to module-level constants or fixtures. Each test must be readable on its own as much as possible.
 22. Add this block at the bottom:
 
 ```python
+import pytest
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
 ```
