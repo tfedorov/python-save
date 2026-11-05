@@ -11,13 +11,15 @@ A personal Python practice repo. Covers core language topics and includes a smal
 
 **`tests/`** - pytest test files organized by topic:
 - `json/json_reader.py` - JSON module (`dumps`, `loads`, `dump`, `load`, pretty print)
-- `test_dict.py` - dicts, lists, sets
-- `test_collections_module.py`, `test_collection_n7.py` - `Counter`, `defaultdict`, `deque`
-- `test_dataclass_agent.py` - Python dataclasses
-- `test_types.py` - type hints and typing module
-- `test_generator_n8.py` - generators and lazy evaluation
-- `test_functions.py` - args, kwargs, function patterns
-- `test_two_arrary.py` - LeetCode-style array problems
+- `classes/test_dataclass_agent.py` - dataclasses, field defaults, instance methods
+- `collections/test_dict.py` - dict comprehensions, set operations
+- `collections/test_collections_module.py`, `test_collection_n7.py` - `Counter`, `defaultdict`, `deque`
+- `collections/test_generator_n8.py` - generators and lazy evaluation
+- `collections/test_two_arrary.py` - LeetCode-style array problems
+- `functions/test_functions.py` - args, kwargs, function patterns
+- `functions/test_decorators.py` - decorators: `time_measure`, `counter`, `remember_calls`
+- `functions/test_decorator_register.py` - registry decorator pattern with `make_registry`
+- `types/test_types.py` - type hints, `list`, `dict`, `Any`, union types
 
 ## Run tests
 
