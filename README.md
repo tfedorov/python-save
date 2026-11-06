@@ -20,6 +20,8 @@ A personal Python practice repo. Covers core language topics and includes a smal
 - `functions/test_decorators.py` - decorators: `time_measure`, `counter`, `remember_calls`
 - `functions/test_decorator_register.py` - registry decorator pattern with `make_registry`
 - `types/test_types.py` - type hints, `list`, `dict`, `Any`, union types
+- `context_managers/test_temp_env_var.py` - context manager that temporarily sets an environment variable
+- `context_managers/test_suppress_error.py` - context manager that suppresses specified exception types
 
 ## Run tests
 
